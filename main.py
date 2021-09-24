@@ -45,5 +45,5 @@ def get_req_parameters():
 
 if __name__ == "__main__":
     # Use debug only when required. With debug no need to stop the server every time.
-    app.run(debug=True)
+    app.run()
     # Use Cntl+C to stop the server
