@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.6.1-alpine
 ## Changing your working directory 
 WORKDIR /project
 ##copy local files to project directory

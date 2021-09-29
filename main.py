@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request
 #import flasgger
 from flasgger import Swagger
+import os
 
 # Defining the name (will fetch from the actual file name)
 app = Flask(__name__)
@@ -45,5 +46,6 @@ def get_req_parameters():
 
 if __name__ == "__main__":
     # Use debug only when required. With debug no need to stop the server every time.
-    app.run(host="0.0.0.0",port=3400)
+    port = int(os.environ.get('PORT',5000))
+    app.run(host="0.0.0.0",port=port)
     # Use Cntl+C to stop the server
